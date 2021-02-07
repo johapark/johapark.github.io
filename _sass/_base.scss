@@ -162,6 +162,7 @@ a, table.table a {
 }
 
 .news table th {
+  font-size: 1rem;
   color: var(--global-text-color);
 }
 
@@ -349,6 +350,7 @@ footer.sticky-bottom {
       }
       .title {
         font-weight: bolder;
+        font-size: 1.1rem;
       }
       .author {
         a {
