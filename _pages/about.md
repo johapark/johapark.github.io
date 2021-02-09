@@ -2,23 +2,24 @@
 layout: about
 title: about
 permalink: /
-description: <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
+description: Postdoctoral Associate, <a href="https://chunglab.org" target="_blank">Chung Lab</a> at MIT.
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: profile.jpg
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>E-mail:</p>
+    <p>[firstname][lastname] AT mit.edu</p>
 
 news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I'm a computational biologist who specializes in sequencing and imaging data analysis. I majored in Biology for my undergraduate at Seoul National University, and then joined [Narry Kim Lab](https://narrykim.org){:target="_blank"} for my Ph.D. to study post-transcriptional regulations of coding and non-coding RNAs. During my graduate period, I'd got trained to do both wet and computational work with an emphasis on the latter. Besides typical sequencing methods such as (sc)RNA-seq, I have extensive experience in library preparation and data analysis for some specialized custom RNA-seq datasets, for example, TAIL-seq for measuring the global mRNA poly(A) tail length.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+After I joined Chung Lab as a postdoc, I've been focusing on microscopy imaging data analysis. The typical datasets that I analyze include large-scale confocal/SPIM images of enlarged and cleared tissue-gel hybrids, which usually demand dedicated machine learning techniques and efficient parallelization of computation.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/){:target="\_blank"} and [Academicons](https://jpswalsh.github.io/academicons/){:target="\_blank"}, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+My current research interest lies in spatial transcriptomics/proteomics in the neuroscience and immunology contexts. I believe we could obtain unprecedentedly rich information at multiple scales if we could combine and utilize the strengths of both sequencing and imaging techniques.
+
+---
