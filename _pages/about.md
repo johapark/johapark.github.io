@@ -6,7 +6,7 @@ description: Postdoctoral Associate, <a href="https://chunglab.org" target="_bla
 
 profile:
   align: right
-  image: profile.jpg
+  image: profile.jpeg
   address: >
     <p>E-mail:</p>
     <p>[firstname][lastname] AT mit.edu</p>
