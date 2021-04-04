@@ -131,8 +131,9 @@ plugins:
 
 scholar:
 
+  highlights: [Joha Park]
   last_name: Park
-  first_name: [Joha, J.]
+  first_name: Joha
 
   style: apa
   locale: en

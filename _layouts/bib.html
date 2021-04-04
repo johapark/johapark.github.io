@@ -19,12 +19,32 @@
       <div class="title">{{entry.title}}</div>
       <div class="author">
         {% for author in entry.author_array %}
+          {% capture author_fullname %}{{author.first}} {{author.last}}{% endcapture %}
+          {% assign first_tokenized = author.first | split: " " %}
+          {% assign author_first_initials = "" %}
+          {% for token in first_tokenized %}
+            {% assign initial = token | slice:0 %}
+            {% if author_first_initials == "" %}
+              {% assign author_first_initials = initial | append: "." %}
+            {% else %}
+              {% assign author_first_initials = author_first_initials | append: " " | append: initial | append: "." %}
+            {% endif %}
+
+          {% endfor %}
+          {% capture author_formatted %}{{author_first_initials}} {{author.last}}{% endcapture %}
+
+          {% assign highlight = false %}
+          {% if site.scholar.highlights contains author_fullname %}
+            {% assign highlight = true %}
+          {% endif %}
+
           {% assign author_is_self = false %}
           {% if author.last == site.scholar.last_name%}
-            {% if site.scholar.first_name contains author.first%}
+            {% if author.first == site.scholar.first_name%}
               {% assign author_is_self = true %}
             {% endif %}
           {% endif %}
+
           {% assign coauthor_url = nil %}
           {% if site.data.coauthors[author.last] %}
             {% for coauthor in site.data.coauthors[author.last] %}
@@ -35,7 +55,6 @@
             {% endfor %}
           {% endif %}
 
-          {% capture author_fullname %}{{author.first}} {{author.last}}{% endcapture %}
           {% capture bibtex_fullname %}{{author.last}}, {{author.first}}{% endcapture %}
           {% assign author_is_cofirst = false %}
           {% assign author_is_cocorres = false %}
@@ -51,30 +70,30 @@
           {% endif %}
 
           {% if forloop.length == 1 %}
-            {% if author_is_self %}
+            {% if highlight %}
               <em>{{author_fullname}}</em>
             {% else %}
               {{author_fullname}}
             {% endif %}
           {% else %}
             {% unless forloop.last %}
-              {% if author_is_self %}
-                <em>{{author_fullname}}{{indicator}}</em>,
+              {% if highlight %}
+                <em>{{author_formatted}}{{indicator}}</em>,
               {% else %}
                 {% if coauthor_url %}
                   <a href="{{coauthor_url}}" target="_blank">{{author_fullname}}{{indicator}},</a>,
                 {% else %}
-                  {{author_fullname}}{{indicator}},
+                  {{author_formatted}}{{indicator}}
                 {% endif %}
               {% endif %}
             {% else %}
-              {% if author_is_self %}
-                and <em>{{author_fullname}}{{indicator}}</em>
+              {% if highlight %}
+                and <em>{{author_formatted}}{{indicator}}</em>
               {% else %}
                 {% if coauthor_url %}
                   and <a href="{{coauthor_url}}" target="_blank">{{author_fullname}}{{indicator}}</a>
                 {% else %}
-                  and {{author_fullname}}{{indicator}}
+                  and {{author_formatted}}{{indicator}}
                 {% endif %}
               {% endif %}
             {% endunless %}
