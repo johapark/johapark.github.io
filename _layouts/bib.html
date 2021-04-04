@@ -30,6 +30,15 @@
               {% assign author_first_initials = author_first_initials | append: " " | append: initial | append: "." %}
             {% endif %}
 
+            {% assign token_hyphen = token | split: "-" %}
+            {% if token_hyphen.size > 1 %}
+              {% assign token_hyphen_slice = token_hyphen | slice:1,token_hyphen.size %}
+              {% for tk in token_hyphen_slice %}
+                {% assign tkinit = tk | slice:0 %}
+                {% assign author_first_initials = author_first_initials | append: "-" | append: tkinit | append: "." %}
+              {% endfor %}
+            {% endif %}
+
           {% endfor %}
           {% capture author_formatted %}{{author_first_initials}} {{author.last}}{% endcapture %}
 
@@ -83,7 +92,7 @@
                 {% if coauthor_url %}
                   <a href="{{coauthor_url}}" target="_blank">{{author_fullname}}{{indicator}},</a>,
                 {% else %}
-                  {{author_formatted}}{{indicator}}
+                  {{author_formatted}}{{indicator}},
                 {% endif %}
               {% endif %}
             {% else %}
