@@ -112,12 +112,16 @@
 
       <div class="periodical">
       {% if entry.type == "article" %}
-        <em>{{entry.journal}}</em>, {{entry.volume}}({{entry.issue}}):{{entry.pages}}
+        {% if entry.unpublished != blank %}
+          <em>{{entry.journal}}</em> ({{entry.unpublished}})
+        {% else %}
+          <em>{{entry.journal}}</em>, {{entry.volume}}({{entry.issue}}):{{entry.pages}}
+        {% endif %}
       {% elsif entry.type == "inproceedings" %}
         <em>In {{entry.booktitle}}</em>
       {% endif %}
-      {% if entry.year %}
-        {{entry.year}}
+      {% if entry.year and entry.unpublished == blank %}
+        , {{entry.year}}
       {% endif %}
       </div>
     {% endif %}
