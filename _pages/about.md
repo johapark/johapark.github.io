@@ -20,6 +20,6 @@ I'm a computational biologist who specializes in sequencing and imaging data ana
 
 After I joined Chung Lab as a postdoc, I've been focusing on microscopy imaging data analysis. The typical datasets I analyze include large-scale confocal/SPIM images of cleared and expanded tissue-gel hybrids ([review](https://www.nature.com/articles/s41583-019-0250-1){:target="_blank"}), which usually require dedicated machine learning techniques and efficient parallelization of computation. I'm developing a new variant of the Expansion Microscopy method with my co-workers and also working on improving the image registration algorithm for multimodal biomedical images.
 
-My current long-term research interest is in single-cell and spatial genomics in the neuroscience and immunology contexts. I believe a cross-disciplinary approach utilizing both sequencing and imaging techniques would enable us to interrogate biological tissues in greater detail at multiple scales.
+My current long-term research interest is in single-cell and spatial genomics in the neuroscience and immunology contexts. I'm particularly interested how cell-to-cell heterogeneity develops within the healthy and diseased tissue microenvironment. I believe a cross-disciplinary approach utilizing both sequencing and imaging techniques would enable us to interrogate biological tissues in greater detail at multiple scales.
 
 ---
