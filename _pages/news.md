@@ -1,10 +1,20 @@
+---
+layout: page
+permalink: /news/
+title: news
+description:
+nav: false
+---
+<!-- This page shows all news entries.
+Not shown in the nav bar but accessible from the link (all news) that presents
+under the recent news section in the front page.-->
+
 <div class="news">
-  <h2>recent news</h2>
   {% if site.news  %}
     <div class="table-responsive">
       <table class="table table-sm table-borderless">
       {% assign news = site.news | reverse %}
-      {% for item in news limit: site.news_limit %}
+      {% for item in news %}
         <tr>
           <th scope="row">{{ item.date | date: "%b %-d, %Y" }}</th>
           <td>
