@@ -10,4 +10,5 @@ group :jekyll_plugins do
     gem 'jemoji'
     gem 'unicode_utils'
     gem 'bibtex-ruby'
+    gem 'nokogiri'
 end
