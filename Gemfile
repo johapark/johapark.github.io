@@ -4,6 +4,7 @@ group :jekyll_plugins do
     gem 'jekyll'
     gem 'jekyll-email-protect'
     gem 'jekyll-github-metadata'
+    gem 'jekyll-commonmark-ghpages', '~> 0.4.0'
     gem 'jekyll-paginate-v2'
     gem 'jekyll-scholar'
     gem 'jekyll-twitter-plugin'

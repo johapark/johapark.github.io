@@ -1,3 +1,6 @@
 #!/bin/zsh
 
+#To install jekyll and other Ruby gems on Apple Silicon
+#arch -arch x86_64 bundle install --path vendor/bundle
+
 arch -arch x86_64 bundle exec jekyll serve --drafts 
