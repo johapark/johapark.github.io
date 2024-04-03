@@ -31,7 +31,7 @@ Prior to that, I did my PhD in the [Narry Kim lab](https://narrykim.org){:target
 I carried out diverse next-generation sequencing (NGS) data analysis to study various noncoding RNAs and mRNA poly(A) tails.
 Besides the standard NGS technologies such as bulk or single-cell RNA-seq, 
 I have extensive experience in designing and analyzing custom sequencing 
-libraries such as fCLIP-seq, TAIL-seq, mTAIL-seq.
+libraries such as fCLIP-seq, TAIL-seq, and mTAIL-seq.
 
 As a scientist, my long-term research interest lies in **single-cell** and **computational genomics** in the therapeutics context. 
 
