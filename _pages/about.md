@@ -16,9 +16,9 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm a computational biologist specializing in **sequencing** and **imaging** data analysis. 
+I'm a computational biologist specializing in **sequencing** and in **imaging** data analysis. 
 I build and develop computational solutions to streamline early clinical research and development. 
-At Intellia, I'm focusing on the off-target discovery and validation for the **CRISPR-Cas** gene editing systems for the **cell and gene therapy**.
+At Intellia, I'm focusing on the off-target discovery and validation for **CRISPR-Cas** gene editing systems for **cell and gene therapy**.
 
 Before Intellia, I was a postdoc in the [Chung lab](https://chunglab.org){:target="_blank"}.
 I had worked on hydrogel-based tissue engineering ([review](https://www.nature.com/articles/s41583-019-0250-1){:target="_blank"}) 
