@@ -1,6 +1,0 @@
-# Co-author name → URL mapping for the publications page.
-# Last name as key; list entries for each matching first name variant.
-# Example:
-# "Smith":
-#   - firstname: ["Jane", "J."]
-#     url: https://janesmith.com
