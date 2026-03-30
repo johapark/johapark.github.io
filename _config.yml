@@ -59,22 +59,13 @@ contact_note: >
   E-mail is the best way to reach me.
 
 google_analytics: G-KVZHRXHHWE # out your google-analytics code
-panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 
 # -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
 
 blog_name: # your blog must have a name for it to show up in the nav bar
-blog_description: a simple whitespace theme for academics
 permalink: /blog/:year/:title/
-
-# Pagination
-pagination:
-  enabled: true
-
-# Comments
-disqus_shortname: johapark # put your disqus shortname
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -86,9 +77,6 @@ collections:
       layout: post
     output: true
     permalink: /news/:path/
-  projects:
-    output: true
-    permalink: /projects/:path/
 
 news_limit: 5
 
@@ -157,9 +145,8 @@ scholar:
 
 enable_google_analytics:    true
 enable_panelbear_analytics: false
-enable_mansory:             true
+enable_mansory:             false
 enable_math:                true
-enable_tooltips:            false
 enable_darkmode:            true
 show_social_icons:          false
 
