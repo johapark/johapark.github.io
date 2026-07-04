@@ -8,12 +8,12 @@ middle_name:
 last_name: Park
 email:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A Joha Park's personal webpage.
+  Joha Park, PhD — computational biologist specializing in sequencing and imaging data analysis.
 footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
-url:  # the base hostname & protocol for your site
+url: https://johapark.github.io # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -61,13 +61,6 @@ contact_note: >
 google_analytics: G-KVZHRXHHWE # out your google-analytics code
 
 # -----------------------------------------------------------------------------
-# Blog
-# -----------------------------------------------------------------------------
-
-blog_name: # your blog must have a name for it to show up in the nav bar
-permalink: /blog/:year/:title/
-
-# -----------------------------------------------------------------------------
 # Collections
 # -----------------------------------------------------------------------------
 
@@ -87,7 +80,6 @@ news_limit: 5
 # Markdown and syntax highlight
 markdown: kramdown
 highlighter: rouge
-highlight_theme: github  # https://github.com/jwarby/jekyll-pygments-themes
 kramdown:
   input: GFM
   syntax_highlighter_opts:
@@ -105,13 +97,8 @@ exclude: [vendor, templates]
 # Plug-ins
 plugins:
   - jekyll-email-protect
-  - jekyll-github-metadata
-  - jekyll-paginate-v2
   - jekyll/scholar
-  - jekyll-twitter-plugin
   - jemoji
-  # - bootstrap
-  # - material-sass
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
@@ -145,7 +132,6 @@ scholar:
 
 enable_google_analytics:    true
 enable_panelbear_analytics: false
-enable_mansory:             false
 enable_math:                true
 enable_darkmode:            true
 show_social_icons:          false
@@ -170,9 +156,6 @@ jquery:
   integrity: "sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
 mathjax:
   version: "3.1.2"
-mansory:
-  version: "4.2.2"
-  integrity: "sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
 mdb:
   version: "4.19.1"
   integrity:

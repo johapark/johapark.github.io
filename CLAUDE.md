@@ -12,6 +12,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Jekyll-based academic personal website using the **al-folio** theme, deployed to GitHub Pages.
 
+**Build stack:** Jekyll 4.x with `jekyll-scholar` 7.x (publications) and `jekyll-sass-converter` 2.x. The site is **not** built by GitHub Pages' managed Jekyll — it self-builds (locally / CI) and pushes compiled HTML to `master`, so it is free of the `github-pages` gem's version pins. Do not re-add `github-pages`.
+
 **Branch strategy:**
 - `source` — editable source files (Markdown, Liquid templates, SCSS, config)
 - `master` — compiled `_site/` output served by GitHub Pages (do not edit directly)
@@ -27,4 +29,6 @@ This is a Jekyll-based academic personal website using the **al-folio** theme, d
 
 **SCSS:** Source in `_sass/`; entry point is `assets/css/main.scss`. Variables and theme colors are in `_sass/_variables.scss` and `_sass/_themes.scss`.
 
-**Ruby version:** 2.7.7 (see `.ruby-version`). The `run` script invokes `arch -arch x86_64` for Rosetta compatibility on Apple Silicon.
+**Ruby version:** 3.3.6 (see `.ruby-version`). Compiles natively on both Intel and Apple Silicon, so `./run` works the same on either — no Rosetta/`arch` workaround. `webrick` is pinned in the `Gemfile` because it was removed from Ruby's stdlib in 3.0 and `jekyll serve` requires it.
+
+**Syntax highlighting:** Rouge CSS is vendored at `_sass/_syntax.scss` (imported by `main.scss`). Regenerate with `bundle exec rougify style github > _sass/_syntax.scss`.

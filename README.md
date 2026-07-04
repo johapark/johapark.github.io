@@ -4,33 +4,25 @@ Personal academic website for Joha Park, PhD. Built with [Jekyll](https://jekyll
 
 ## Setup
 
-macOS does not ship with Ruby 2.7. Install it via `rbenv`:
+Install the project's Ruby (3.3.6, pinned in `.ruby-version`) via `rbenv`. Ruby 3.3 compiles
+natively on both Intel and Apple Silicon, so the steps below are identical on either machine:
 
 ```bash
 # Install rbenv (if not already installed)
 brew install rbenv ruby-build
 rbenv init  # follow the printed instructions to add rbenv to your shell
 
-# Install Ruby 2.7.7
-rbenv install 2.7.7
-rbenv local 2.7.7   # sets this version for the project directory
+# Install the pinned Ruby (reads .ruby-version)
+rbenv install 3.3.6
 
 # Install gems
 bundle install
 ```
 
-This works on both Intel and Apple Silicon Macs.
-
 ## Local development
 
-**Intel Mac:**
 ```bash
 ./run
-```
-
-**Apple Silicon Mac** (`./run` forces x86_64 which conflicts with native ARM Ruby):
-```bash
-bundle exec jekyll serve --drafts
 ```
 
 Visit `localhost:4000`.
