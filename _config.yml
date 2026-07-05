@@ -16,7 +16,6 @@ footer_text: >
 url: https://johapark.github.io # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/
 last_updated: false # set to true if you want to display last updated in the footer
-impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
 # -----------------------------------------------------------------------------
 # Layout
@@ -42,18 +41,9 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # -----------------------------------------------------------------------------
 
 github_username: johapark # your GitHub user name
-twitter_username: # your Twitter handle
 linkedin_username: johapark # your LinkedIn user name
 scholar_userid: johapark # your Google Scholar ID
 orcid_id: # your ORCID ID
-medium_username: # your Medium username
-quora_username: # your Quora username
-publons_id: # your ID on Publons
-research_gate_profile: # your profile on ResearchGate
-blogger_url: # your blogger URL
-work_url: # work page URL
-keybase_username: # your keybase user name
-wikidata_id: # your wikidata id
 
 contact_note: >
   E-mail is the best way to reach me.
@@ -96,9 +86,7 @@ exclude: [vendor, templates, bin, run, CLAUDE.md, README.md, LICENSE]
 
 # Plug-ins
 plugins:
-  - jekyll-email-protect
   - jekyll/scholar
-  - jemoji
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
@@ -119,10 +107,6 @@ scholar:
 
   replace_strings: true
   join_strings: true
-
-  details_dir: bibliography
-  details_layout: bibtex.html
-  details_link: Details
 
   query: "@*"
 

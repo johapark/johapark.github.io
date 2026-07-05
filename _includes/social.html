@@ -1,5 +1,5 @@
 <span class="contact-icon text-center">
-  {% if site.email %}<a href="mailto:{{ site.email | encode_email }}" title="E-mail">{% include icons/envelope.svg %}</a>{% endif %}
+  {% if site.email %}<a href="mailto:{{ site.email }}" title="E-mail">{% include icons/envelope.svg %}</a>{% endif %}
   {% if site.orcid_id %}<a href="https://orcid.org/{{ site.orcid_id }}" target="_blank" title="ORCID">{% include icons/orcid.svg %}</a>{% endif %}
   {% if site.scholar_userid %}<a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" title="Google Scholar">{% include icons/google-scholar.svg %}</a>{% endif %}
   {% if site.github_username %}<a href="https://github.com/{{ site.github_username }}" target="_blank" title="GitHub">{% include icons/github.svg %}</a>{% endif %}

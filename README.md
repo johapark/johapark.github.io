@@ -19,19 +19,18 @@ rbenv install 3.3.6
 bundle install
 ```
 
-## Local development
+## Dev workflow
 
-```bash
-./run
-```
+All editing happens on the `source` branch; `master` holds the compiled site and is
+managed entirely by CI — never edit it directly.
 
-Visit `localhost:4000`.
+1. Make changes on `source` (see the table below for where things live).
+2. Preview locally with `./run` and visit `localhost:4000`.
+3. Commit and push `source`. GitHub Actions (`.github/workflows/deploy.yml`) builds the
+   site and force-pushes the output to `master`, which GitHub Pages serves. The site is
+   live a minute later.
 
-## Deployment
-
-Push to the `source` branch. GitHub Actions (`.github/workflows/deploy.yml`) builds the site
-and force-pushes the compiled output to `master`, which GitHub Pages serves. Never edit
-`master` directly. Pull requests against `source` get a build check without deploying.
+Pull requests against `source` get a build check without deploying.
 
 ## Making changes
 

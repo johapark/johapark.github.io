@@ -7,9 +7,9 @@
         <th scope="row">{{ item.date | date: "%b %-d, %Y" }}</th>
         <td>
           {% if item.inline %}
-            {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+            {{ item.content | remove: '<p>' | remove: '</p>' }}
           {% else %}
-            <a href="{{ item.url | relative_url }}" style="color: var(--global-text-color)">{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}</a>
+            <a href="{{ item.url | relative_url }}" style="color: var(--global-text-color)">{{ item.content | remove: '<p>' | remove: '</p>' }}</a>
           {% endif %}
         </td>
       </tr>
