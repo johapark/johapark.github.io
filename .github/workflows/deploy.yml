@@ -3,41 +3,42 @@ name: Deploy
 on:
   push:
     branches:
-      - master
       - source
   pull_request:
     branches:
-      - master
       - source
 
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.3'
-        bundler-cache: true
-    - name: Setup deploy options
-      id: setup
-      run: |
-        git config --global user.name "GitHub Action"
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        if [[ ${GITHUB_REF} = refs/pull/*/merge ]]; then # pull request
-          echo "SRC_BRANCH=${GITHUB_HEAD_REF}" >> "$GITHUB_OUTPUT"
-          echo "NO_PUSH=--no-push" >> "$GITHUB_OUTPUT"
-        elif [[ ${GITHUB_REF} = refs/heads/* ]]; then # branch, e.g. master, source etc
-          echo "SRC_BRANCH=${GITHUB_REF#refs/heads/}" >> "$GITHUB_OUTPUT"
-        fi
-        if [[ ${{ github.repository }} = *.github.io ]]; then # user/org repo
-          echo "DEPLOY_BRANCH=master" >> "$GITHUB_OUTPUT"
-        else
-          echo "DEPLOY_BRANCH=gh-pages" >> "$GITHUB_OUTPUT"
-        fi
-    - name: Deploy website 
-      run:  yes | bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }}
-                    --src ${{ steps.setup.outputs.SRC_BRANCH }} 
-                    --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }} 
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Build site
+        run: bin/cibuild
+        env:
+          JEKYLL_ENV: production
+
+      # Pull requests stop here: build check only, no deploy.
+      - name: Deploy to master
+        if: github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: master
+          publish_dir: ./_site
+          force_orphan: true

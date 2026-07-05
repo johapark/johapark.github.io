@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - **Local dev server:** `./run` (serves at `localhost:4000` with drafts enabled)
 - **CI build:** `./bin/cibuild`
-- **Deploy:** `./bin/deploy --user` (builds from `source` branch, deploys compiled site to `master`)
+- **Deploy:** push to `source` — GitHub Actions builds and force-pushes `_site/` to `master` (peaceiris/actions-gh-pages). There is no local deploy script.
 
 ## Architecture
 

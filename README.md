@@ -29,11 +29,9 @@ Visit `localhost:4000`.
 
 ## Deployment
 
-```bash
-./bin/deploy --user
-```
-
-Builds from the `source` branch and pushes the compiled site to `master`, which GitHub Pages serves. Never edit `master` directly.
+Push to the `source` branch. GitHub Actions (`.github/workflows/deploy.yml`) builds the site
+and force-pushes the compiled output to `master`, which GitHub Pages serves. Never edit
+`master` directly. Pull requests against `source` get a build check without deploying.
 
 ## Making changes
 
