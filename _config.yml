@@ -92,7 +92,7 @@ kramdown:
 
 # Includes & excludes
 include: ['_pages']
-exclude: [vendor, templates]
+exclude: [vendor, templates, bin, run, CLAUDE.md, README.md, LICENSE]
 
 # Plug-ins
 plugins:
