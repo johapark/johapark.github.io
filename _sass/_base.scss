@@ -10,6 +10,8 @@ p, h1, h2, h3, h4, h5, h6, em, div, span, strong {
 
 a, table.table a {
   color: var(--global-theme-color);
+  // Bootstrap 5 underlines links by default; keep the Bootstrap 4 look.
+  text-decoration: none;
   &:hover {
     color: var(--global-theme-color);
     text-decoration: underline;
@@ -17,6 +19,18 @@ a, table.table a {
   &:hover:after {
     width: 100%;
   }
+}
+
+// Inline SVG icons (replacing the Font Awesome / Academicons webfonts)
+
+svg.icon {
+  // content-box so padding (e.g. on the dark-mode toggle) doesn't shrink the
+  // icon, matching how the old font glyphs behaved.
+  box-sizing: content-box;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -0.125em;
 }
 
 // Math
@@ -155,6 +169,13 @@ a, table.table a {
 
 
 // News
+
+.news table {
+  // Bootstrap 5.3 tables paint their own background; stay transparent so the
+  // dark theme's page background shows through.
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--global-text-color);
+}
 
 .news table td {
   font-size: 1rem;

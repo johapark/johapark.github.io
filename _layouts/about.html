@@ -6,14 +6,14 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title">
-     <span class="font-weight-bold">{{ site.first_name }}</span> {% if site.middle_name %}{{ site.middle_name }} {% endif %}{{ site.last_name }}
+     <span class="fw-bold">{{ site.first_name }}</span> {% if site.middle_name %}{{ site.middle_name }} {% endif %}{{ site.last_name }}
     </h1>
      <p class="desc">{{ page.description }}</p>
   </header>
 
   <article>
     {% if page.profile %}
-    <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+    <div class="profile float-{% if page.profile.align == 'left' %}start{% else %}end{% endif %}">
       {% if page.profile.image %}
         <img class="img-fluid rounded" src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}" alt="{{ site.first_name }} {{ site.last_name }}">
       {% endif %}

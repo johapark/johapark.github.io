@@ -7,4 +7,5 @@ _site
 .DS_store
 .tweet-cache/
 Gemfile.lock
-vendor
+# Bundler's install path (repo root only — assets/vendor/ is tracked)
+/vendor/

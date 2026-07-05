@@ -29,6 +29,8 @@ This is a Jekyll-based academic personal website using the **al-folio** theme, d
 
 **SCSS:** Source in `_sass/`; entry point is `assets/css/main.scss`. Variables and theme colors are in `_sass/_variables.scss` and `_sass/_themes.scss`.
 
+**Frontend assets:** Bootstrap 5.3 is self-hosted at `assets/vendor/bootstrap/` — no CDN, no jQuery (site JS in `assets/js/` is vanilla). Icons are inline SVG includes in `_includes/icons/` (Font Awesome path data, CC BY 4.0 comment kept for attribution); there is no icon webfont. The only external requests are Google Fonts and Google Analytics. Note: `.gitignore` ignores `/vendor/` (Bundler) at the root only — `assets/vendor/` must stay tracked.
+
 **Ruby version:** 3.3.6 (see `.ruby-version`). Compiles natively on both Intel and Apple Silicon, so `./run` works the same on either — no Rosetta/`arch` workaround. `webrick` is pinned in the `Gemfile` because it was removed from Ruby's stdlib in 3.0 and `jekyll serve` requires it.
 
 **Syntax highlighting:** Rouge CSS is vendored at `_sass/_syntax.scss` (imported by `main.scss`). Regenerate with `bundle exec rougify style github > _sass/_syntax.scss`.
