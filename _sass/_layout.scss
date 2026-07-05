@@ -4,6 +4,7 @@
 
  body {
    padding-bottom: 70px;
+   font-family: 'Roboto', sans-serif;
    color: var(--global-text-color);
    background-color: var(--global-bg-color);
  }
@@ -26,6 +27,7 @@
 .profile {
   img {
     width: 100%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   }
 }
 

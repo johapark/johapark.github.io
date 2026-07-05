@@ -1,0 +1,21 @@
+{% if site.news %}
+  <div class="table-responsive">
+    <table class="table table-sm table-borderless">
+    {% assign news_items = site.news | reverse %}
+    {% for item in news_items limit: include.limit %}
+      <tr>
+        <th scope="row">{{ item.date | date: "%b %-d, %Y" }}</th>
+        <td>
+          {% if item.inline %}
+            {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+          {% else %}
+            <a href="{{ item.url | relative_url }}" style="color: var(--global-text-color)">{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}</a>
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+    </table>
+  </div>
+{% else %}
+  <p>No news so far...</p>
+{% endif %}
