@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: Senior Computational Scientist at <a href="https://intelliatx.com" target="_blank">Intellia Therapeutics</a>
+description: Principal Computational Scientist at <a href="https://intelliatx.com" target="_blank">Intellia Therapeutics</a>
 
 profile:
   align: right
