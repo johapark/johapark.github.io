@@ -15,9 +15,13 @@ news: true  # includes a list of news items
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm a computational biologist specializing in **sequencing** and in **imaging** data analysis.
-I build and develop bioinformatics and AI/ML solutions to advance therapeutic development.
-At Intellia, my role includes discovery, validation, and prediction of **CRISPR-Cas** gene editing off-targets and derisking genotoxicity.
+I'm a computational biologist with 10+ years of experience spanning RNA biology, genomics, spatial omics, and **CRISPR-Cas9** gene editing.
+I design **deep learning** and **generative AI** frameworks, paired with scalable bioinformatics pipelines, that translate large-scale **sequencing** and **imaging** data into therapeutic insights.
+
+At Intellia, I train deep learning models to predict CRISPR-Cas9 on-target efficacy and population variant-aware, genome-wide off-targets,
+and apply **genomic foundation models** to variant effect prediction for **genotoxicity** derisking.
+I also leverage **generative AI** for protein and guide RNA engineering to advance a DNA-writing platform,
+with hands-on experience across the full development arc from pre-IND to BLA.
 
 Before Intellia, I was a postdoc in the [Chung lab](https://chunglab.org){:target="_blank"}.
 I had worked on hydrogel-based tissue engineering ([review](https://www.nature.com/articles/s41583-019-0250-1){:target="_blank"})
@@ -32,6 +36,6 @@ Besides the standard NGS technologies such as bulk or single-cell RNA-seq,
 I have extensive experience in designing and analyzing custom sequencing
 libraries such as fCLIP-seq, TAIL-seq, and mTAIL-seq.
 
-As a scientist, my long-term research interest lies in **single-cell** and **computational genomics** in the therapeutics context.
+As a scientist, my long-term research interest lies in applying **AI/ML** to **single-cell** and **computational genomics** in the therapeutics context.
 
 ---
